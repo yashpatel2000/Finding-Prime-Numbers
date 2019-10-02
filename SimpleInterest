@@ -1,0 +1,19 @@
+import java.util.*;
+class Simpleinterest
+{
+public static void main(String[]args)
+{
+Scanner sc=new Scanner(System.in);
+
+System.out.println("principle amount");
+float P=sc.nextFloat();
+System.out.println("Rate of interest");
+float R=sc.nextFloat();
+System.out.println("Time");
+float T=sc.nextFloat();
+
+System.out.println();
+System.out.println("simple interest="+P*R*T/100);
+
+}
+}
