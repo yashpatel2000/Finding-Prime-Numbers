@@ -1,0 +1,38 @@
+class Stackll<D> implements Stack<D>
+{
+    ListObject<D> TOP;
+    Stackll()
+    {
+        TOP=null;
+    }
+    public D peek()
+    {
+        return TOP.val;
+    }
+    public void push(D o)
+    {
+        ListObject<D> ob=new ListObject<D>(o);
+        ob.next=null;
+        if(TOP==null)
+        TOP=ob;
+        else
+        {
+            ob.next=TOP;
+            TOP=ob;
+        }
+    }
+    public D pop()
+    {
+        
+        D b=TOP.val;
+        TOP=TOP.next;
+        return b;
+    }
+    public Integer Size()
+    {
+        Integer c=0;
+        for(ListObject<D> i=TOP;i!=null;i=i.next)
+        ++c;
+        return c;
+    }
+}
